@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.PrefixSelectionComboBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="647.0" prefWidth="1021.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oculusvisionjavafx.alergjite.AlergjiteGUIController">
+    <stylesheets>
+        <URL value="@alergjitegui.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="table" layoutX="292.0" layoutY="72.0" prefHeight="566.0" prefWidth="706.0" style="-fx-background-color: white;">
+        <columns>
+          <TableColumn fx:id="col_ID" prefWidth="100.0" text="ID" />
+          <TableColumn fx:id="col_Pacienti" prefWidth="84.0" text="Pacienti" />
+            <TableColumn fx:id="col_Ilaci" prefWidth="87.0" text="Ilaci" />
+            <TableColumn fx:id="col_rrexiksh" prefWidth="98.0" text="Rrezikshmeria" />
+            <TableColumn fx:id="col_data" text="Data" />
+            <TableColumn fx:id="col_vrjt" prefWidth="96.0" text="VerejturNga" />
+            <TableColumn fx:id="col_Pershk" prefWidth="158.0" text="Pershkrimi" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="7.0" layoutY="11.0" prefHeight="42.0" prefWidth="990.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="400.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALERGJITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="7.0" layoutY="72.0" prefHeight="566.0" prefWidth="267.0" style="-fx-background-color: WHITE;">
+         <children>
+            <PrefixSelectionComboBox fx:id="IlaciComboBox" layoutX="14.0" layoutY="100.0" prefHeight="25.0" prefWidth="179.0" promptText="Ilaci" style="-fx-background-color: #01C0C8;" />
+            <DatePicker fx:id="dataNdodhjesPicker" layoutX="14.0" layoutY="208.0" prefHeight="25.0" prefWidth="179.0" promptText="Data Ndodhjes" style="-fx-background-color: #01C0C8;" />
+            <PrefixSelectionComboBox fx:id="pacientiComboBox" layoutX="14.0" layoutY="59.0" prefHeight="25.0" prefWidth="179.0" promptText="Pacienti" style="-fx-background-color: #01C0C8;" />
+            <JFXButton fx:id="fshijBtn" layoutX="117.0" layoutY="474.0" onAction="#fshijOnAction" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: #01C0C8;" text="Fshij">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ruajBtn" layoutX="29.0" layoutY="474.0" onAction="#ruajOnAction" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: #01C0C8;" text="Ruaj">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Text fill="#5b5454" layoutX="14.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rrezikshmeria:" />
+            <JFXRadioButton fx:id="rrezLarteRadioButton" layoutX="104.0" layoutY="173.0" prefHeight="17.0" prefWidth="76.0" style="-jfx-selected-color: #01C0C8;" text="E larte">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rrezikshmeriaGroup" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rrezUletRadioButton" layoutX="14.0" layoutY="173.0" prefHeight="17.0" prefWidth="76.0" selected="true" style="-jfx-selected-color: #01C0C8;" text="E ulet" toggleGroup="$rrezikshmeriaGroup" />
+            <JFXTextArea fx:id="pershkrimiShTextfField" labelFloat="true" layoutX="15.0" layoutY="309.0" prefHeight="104.0" prefWidth="179.0" promptText="PershkrimiShtese" />
+            <JFXTextField fx:id="verujturNgaTextField" labelFloat="true" layoutX="14.0" layoutY="258.0" prefHeight="25.0" prefWidth="179.0" promptText="VerejturNga" />
+            <JFXTextField fx:id="idTextField" disable="true" labelFloat="true" layoutX="15.0" layoutY="14.0" prefHeight="25.0" prefWidth="179.0" promptText="ID" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

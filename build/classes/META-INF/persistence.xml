@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="OculusVisionJavaFxPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>oculusvisionjavafx.entities.Syzet</class>
+    <class>oculusvisionjavafx.entities.Tipetedhomave</class>
+    <class>oculusvisionjavafx.entities.Porosia</class>
+    <class>oculusvisionjavafx.entities.Llojiqertifikates</class>
+    <class>oculusvisionjavafx.entities.Kualifikimet</class>
+    <class>oculusvisionjavafx.entities.Roles</class>
+    <class>oculusvisionjavafx.entities.Rolistafit</class>
+    <class>oculusvisionjavafx.entities.Klinika</class>
+    <class>oculusvisionjavafx.entities.Users</class>
+    <class>oculusvisionjavafx.entities.Stafi</class>
+    <class>oculusvisionjavafx.entities.Produkti</class>
+    <class>oculusvisionjavafx.entities.HealthRecords</class>
+    <class>oculusvisionjavafx.entities.Operacioni</class>
+    <class>oculusvisionjavafx.entities.Kontrolla</class>
+    <class>oculusvisionjavafx.entities.Pagesat</class>
+    <class>oculusvisionjavafx.entities.Stock</class>
+    <class>oculusvisionjavafx.entities.Termini</class>
+    <class>oculusvisionjavafx.entities.Qertifikata</class>
+    <class>oculusvisionjavafx.entities.Paisja</class>
+    <class>oculusvisionjavafx.entities.Perberesitilacit</class>
+    <class>oculusvisionjavafx.entities.PajisjeNeDhoma</class>
+    <class>oculusvisionjavafx.entities.Pacienti</class>
+    <class>oculusvisionjavafx.entities.Ilac</class>
+    <class>oculusvisionjavafx.entities.Dhoma</class>
+    <class>oculusvisionjavafx.entities.Alergjite</class>
+    <class>oculusvisionjavafx.entities.Thjerreza</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/clinic1?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="27111997"/>
+    </properties>
+  </persistence-unit>
+</persistence>

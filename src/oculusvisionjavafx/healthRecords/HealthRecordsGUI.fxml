@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="726.0" style="-fx-background-color: grey;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oculusvisionjavafx.healthRecords.HealthRecordsGUIController">
+    <stylesheets>
+        <URL value="@healthrecordsgui.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="14.0" prefHeight="40.0" prefWidth="713.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="250.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SHENIMET E SHENDETIT" wrappingWidth="250.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="8.0" layoutY="65.0" prefHeight="502.0" prefWidth="282.0" style="-fx-background-color: white;">
+         <children>
+            <JFXTextField fx:id="idTextField" disable="true" layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="150.0" promptText="ID" />
+            <ComboBox fx:id="pacientiIDComboBox" layoutX="14.0" layoutY="58.0" prefWidth="150.0" promptText="PacientiID" />
+            <ComboBox fx:id="stafiIDComboBox" layoutX="14.0" layoutY="98.0" prefWidth="150.0" promptText="StaiID" />
+            <DatePicker fx:id="datePicker" layoutX="14.0" layoutY="143.0" prefHeight="25.0" prefWidth="150.0" promptText="Data" />
+            <JFXTextArea fx:id="pershkrimiTextArea" layoutX="14.0" layoutY="203.0" prefHeight="143.0" prefWidth="150.0" promptText="Pershkrimi" />
+            <JFXButton layoutX="100.0" layoutY="420.0" onAction="#ruajBtn" prefHeight="25.0" prefWidth="58.0" text="Ruaj" />
+            <JFXButton layoutX="179.0" layoutY="420.0" onAction="#fshijBtn" prefHeight="25.0" prefWidth="58.0" text="Fshij" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table" layoutX="321.0" layoutY="65.0" prefHeight="502.0" prefWidth="401.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="col_pacientiID" prefWidth="75.0" text="Pacienti ID" />
+            <TableColumn fx:id="col_stafiID" prefWidth="75.0" text="Stafi ID" />
+            <TableColumn fx:id="col_data" prefWidth="75.0" text="Data" />
+            <TableColumn fx:id="col_pershkrimi" prefWidth="75.0" text="Pershkrimi" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
